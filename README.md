@@ -1,4 +1,4 @@
 # CRUD en php
-# Alertas
-# Exportar a Excel
-# Busqueda
+* Alertas
+* Exportar a Excel
+* Busqueda
