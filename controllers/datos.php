@@ -40,18 +40,15 @@ $conexion=conexion();
   <?php
 while($res=mysqli_fetch_array($result)){
   ?>
-  <?php
-  echo "
   <tr>
-    <td><h6>".$res["id"]."</h6></td>
-    <td id='nombre_usuario' data-id_usuario='".$res["id"]."' contenteditable><h6>".$res["nombre"]."</h6></td>
-    <td id='descripcion' data-descripcion='".$res["id"]."' contenteditable><h6>".$res["descripcion"]."</h6></td>
-    <td id='precio' data-precio='".$res["id"]."' contenteditable><h6>".$res["precio"]."</h6></td>
-    <td id='cantidad' data-cantidad='".$res["id"]."' contenteditable><h6>".$res["cantidad"]."</h6></td>
-    <td><button class='btn btn-danger' id='eliminar'  data-id='".$res["id"]."' ><h6>Eliminar</h6></button></td>
-
+    <td><?php echo $res["id"]; ?></td>
+    <td id="nombre_usuario" data-id_usuario="<?php echo $res["id"]; ?>" contenteditable><?php echo  $res["nombre"];?></td>
+    <td id="descripcion" data-descripcion="<?php echo $res["id"]; ?>" contenteditable><?php echo $res["descripcion"];?></td>
+    <td id="precio" data-precio="<?php echo $res["id"]; ?>" contenteditable><?php echo $res["precio"];?></td>
+    <td id="cantidad" data-cantidad="<?php echo $res["id"]; ?>" contenteditable><?php echo $res["cantidad"];?></td>
+    <td><button class='btn btn-danger' id='eliminar'  data-id="<?php echo $res["id"]; ?>" >Eliminar</button></td>
   </tr>
-  ";
+  <?php 
 }
 ?>
   <tr>
@@ -65,5 +62,4 @@ while($res=mysqli_fetch_array($result)){
 </tbody>
 </table>
 </div>
-
 <script src="js/tableToExcel.js"> </script>
